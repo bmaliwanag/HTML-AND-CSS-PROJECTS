@@ -1,0 +1,13 @@
+p {
+	color: red;
+	background: green;
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+#shadow {
+	font-size: 2.5rem;
+	text-shadow: 4px 4px #7f7f7f;
+}
+
+/* Comment Test */
