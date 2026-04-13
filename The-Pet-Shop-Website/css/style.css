@@ -37,6 +37,7 @@ a:hover{
     margin-right: -10px;
     position: sticky; /*Creates a sticky element that stays in the same spot in the browser screen*/
     top: 0; /*Tells the browser to stick the element at the top of the page based on user scrolling*/
+    z-index: 9;
 }
 
 /*Creates a line under the Home and Contact links to separate them from the image links*/
@@ -52,4 +53,175 @@ h1, h2, h3 {
     font-family: 'Mukta', sans-serif; /*another font from google*/
     text-shadow: 1px, .5px 4px rgba(0,0,0,0.5);
     margin: 0px;
+}
+
+h1 {
+    font-size: 60px;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#contact-h3{
+    text-shadow: none;
+}
+
+/*creates a text color change*/
+@keyframes color-text{
+    0%{color: #b5e1ff;}
+    100%{color: #0a3f63;}
+}
+
+/*Calls the animation by it's name in a CSS selector so it can be applied to a specific HTML element*/
+.animate-text{
+    animation: color-text 1s;
+}
+
+/*Body content*/
+img{
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4),
+    0 6px 20px 0 rgba(0,0,0,19);
+
+}
+
+.column{
+    float: left;
+    width: 48%; /*places img side by side*/
+    padding: 10px;
+}
+
+/*Groups element inside a div element together and forces any floating elements outside of the div under it with this class selector*/
+.contatiner{
+    background-size: 100% !important;
+    margin: 0px -60px 50px -40px;
+    padding-top: 5px; /*Padding will add an inline space so the elements dont sit on the edge of the div*/
+    padding-bottom: 10px;
+}
+
+/*This is part of the .container class selector to format the elements to display in a table like format*/
+.container::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*Sets up the size of each div that holds an image so the image can be cenetered*/
+.image-container{
+    position: relative;
+    width: 500px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+#cat{
+    background-color: #d7eaf7;
+}
+
+#dog{
+    background-color: #c3e0c5;;
+}
+
+#rabbit{
+    background-color: #c3e0c5;;
+}
+
+#guineapig{
+    background-color: #d7eaf7;
+}
+
+#fish{
+    background-color: #d7eaf7;
+}
+
+#reptile{
+    background-color: #c3e0c5;;
+}
+
+/*Sets up the properties for the overlay on each image*/
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 350px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: rgb(0,0,0);
+    opacity: 0;
+}
+
+/*The hover pseudo-class triggers the overlay to 60%*/
+.overlay:hover{
+    opacity: 0.6;
+}
+
+/*This selector targets the video on the page*/
+iframe{
+    display: table;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+}
+
+/*Styles video div*/
+#video{
+    background-color: #c3e0c5;
+    padding-top: 5px; /*Padding will add an inline space so the elements dont sit on the edge of the div*/
+    padding-bottom: 50px;
+}
+
+footer{
+    background-color: #216391;
+    margin-top: 50px;
+    /*Negative margins strength the footer background beyond the web browser screen edge on the left and right*/
+    margin-right: -10px; 
+    margin-left: -10px;
+    bottom: 0; /*Positions the footer on the bottom of the screen*/
+}
+
+/*Style the table elements within the footer tags*/
+table{
+    width:100%;
+}
+
+td{
+    text-align: center;
+    width: 33%; /*We divide the three columns equally so that each column takes a third of the browser width*/
+}
+
+/*Specfically styles the paragraphs elements within he table data elements*/
+td p{
+    font-family: 'Roboto',sans-serif;
+    color: rgb(255,255,255);
+}
+
+/*Form Css*/
+form{
+    padding: 15px;
+    display: table;
+    margin: auto;
+}
+
+input{
+    border: 2px solid rgb(165,165,165);
+    border-radius: 2px;
+    padding: 1px;
+    margin: 10px 15px 10px 0px;
+    font-size: 20px;
+    color: rgb(165,165,165);
+
 }
