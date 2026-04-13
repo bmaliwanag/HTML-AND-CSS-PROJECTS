@@ -1,5 +1,7 @@
 /*import link Roboto*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+/*import link from video because Mukta is not latin alphanumeric*/
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 
 body {
     background-color: white;
@@ -42,4 +44,12 @@ a:hover{
     padding-bottom: 10px;
     border-bottom: 3px solid #ffffff;
 
+}
+/*Headers*/
+h1, h2, h3 {
+    color: #0a3f63;
+    text-align: center;
+    font-family: 'Mukta', sans-serif; /*another font from google*/
+    text-shadow: 1px, .5px 4px rgba(0,0,0,0.5);
+    margin: 0px;
 }
