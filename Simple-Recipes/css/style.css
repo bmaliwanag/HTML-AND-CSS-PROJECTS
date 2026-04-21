@@ -170,6 +170,7 @@ p{
     width: 500px;
     height: 350px;
     margin: 100px auto 180px; /*Shorthand value top. right and left, then bottom*/
+    perspective: 1000px; /*Tells the browser how much 3D space an element should takeup on the screen*/
 }
 
 /*Styling for mobile size screens*/
@@ -266,4 +267,142 @@ p{
 /*Specifically styles the hover effect of the recipe button in the featured recipe section*/
 #featured button:hover{
     background-color: rgb(247, 177, 188);
+}
+
+/*Image Flip*/
+
+/*Positions the flip effect, defintes transition time, and defintes a 3D effect*/
+.flip{
+    position: relative;
+    width: 100%;
+    height: 100%; /*Setting 100% for both width and height allows the effect to take up all of the space available*/
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    transform-style: preserve-3d; /*Treats elements as 3D objects instead of flat 2D objects*/
+}
+
+.flip:hover{
+    transform: rotateY(-180deg); /*Rotates element counter clockwise*/
+}
+
+.flip-front, .flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-back{
+    background-color: rgb(149,238,223);
+    border: 2px solid white;
+    transform: rotateY(180deg); /*undoes flipfront so that the text can be read properly*/
+}
+
+.text-container{
+    padding-top: 70px;
+}
+
+@media screen and (max-width: 600px){
+    .text-container{
+    padding-top: 0px;
+    }
+}
+
+/*Recipe Button*/
+input[type=button]{
+    background-color: #fff;
+    border:none;
+    border-radius: 20px;
+    font-family: "Josefin Slab", serif; /*Google Font*/
+    font-weight: bold;
+    font-size: 22px;
+    padding: 11px 17px;
+    color: rgb(1, 128, 106);
+    cursor: pointer;
+}
+
+input[type=button]:hover{
+    background-color: rgb(247, 177, 188);
+    color: white;
+}
+
+/*Contact form CSS*/
+
+/*Sets up the contact within the div tag containing the IS contact to be centered oon the webpage*/
+#contact{
+    display: block;
+    margin-bottom: 70px;
+}
+
+form{
+    display: table;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto; /*The browser will automatically calculate margins to center the form on the screen*/
+}
+
+/*This will specifically target the input tags that are nested withing the form tag*/
+form input{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: rgb(165,165,165);
+    border: 2px solid rgb(165, 165,165);
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px 15px 10px 0px;
+    transition: 0.3s ease-out;
+}
+}
+
+form input:focus{
+    border: 2px solid rgb(1,128,106);
+    color: black;
+    outline: none; /*Removes default border added when the focus pseudo class is triggered*/
+    transition: 0.3s ease-out;
+}
+
+label{
+    font-family: "Josefin Slab", serif; /*Google Font*/
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+textarea{
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    resize: both; /*Allows users to resize the text both width and height*/
+    border: 3px solid rgb(165,165,165);
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(165,165,165);
+    font-size: 15px;
+    transition: 0.3s ease-out;
+}
+
+textarea:focus{
+    color: black;
+    border: 3px solid rgb(1, 128, 106);
+    transition: 0.3s ease-out;
+    outline: none;
+}
+
+input[type=submit]{
+    background-color: rgb(1, 128, 106);
+    border: none;
+    border-radius: 35px;
+    font-family: "Josefin Slab", serif; /*Google Font*/
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 25px;
+    margin-top: 20px;
+    color: #fff;
+    cursor: pointer;
+    float: right; /*Positions the submit button to the bottom right of the form*/
+}
+
+input[type=submit]:hover{
+    background-color: rgb(247, 177,188);
 }
