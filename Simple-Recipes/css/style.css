@@ -6,6 +6,7 @@
 html{
     overflow-x: hidden; /*Prevents the browser from displaying a left-to-right scrollbar as a result of negative margin values.*/
     scroll-behavior: smooth; /*Creates a smooth scrolling effect when a bookmark link is clicked*/
+    
 }
 
 .nav-bar{
