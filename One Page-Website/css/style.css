@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
+
+html{
+    font-family: "Mogra", system-ui; /*Font from google*/
+    font-size: 24px;
+    overflow-x: hidden; /*Prevents the browser from displaying a left-to-right scrollbar as a result of negative margin values.*/
+    scroll-behavior: smooth;
+    text-align: center;
+}
+
+form input{
+    border: 2px solid rgb(165, 165,165);
+    border-radius: 5px;
+    margin: 10px 15px 10px 0px;
+    width: 250px;
+}
+
+footer{
+    align-items: center;
+    margin: 0px -8px -8px -8px; /*Stretches the footer background beyond the browsers edge leaving no white space*/
+    border-top: 5px solid rgb(247,177,188);
+    bottom: 0; /*Positions footer at the bottom of the screen*/
+}

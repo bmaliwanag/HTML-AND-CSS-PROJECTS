@@ -352,7 +352,6 @@ form input{
     margin: 10px 15px 10px 0px;
     transition: 0.3s ease-out;
 }
-}
 
 form input:focus{
     border: 2px solid rgb(1,128,106);
