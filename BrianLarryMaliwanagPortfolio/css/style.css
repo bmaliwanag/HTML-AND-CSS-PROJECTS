@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+
+:root {
+    --title-font: "Sixtyfour", sans-serif;
+    --body-font: 'Courier New', 'Courier', monospace;
+}
+
+html {
+    text-align: center;
+}
+
+#intro {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#Projects {
+    img {
+        filter: invert(100%);
+    }
+
+    a {
+        font-family: var(--title-font);
+    }
+}
+
+.section {
+    display: flex;
+    min-height: 200px;
+    background-color: #f00;
+
+    a{
+        text-decoration:underline
+    }
+}
+
+.left,
+.right {
+    flex: 1;
+    /* each takes 50% */
+
+}
+
+nav {
+    background-color: #f00;
+    padding: 10px;
+
+    a {
+        padding: 10px;
+    }
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    transition: #f00 0.5s ease-in;
+}
+
+a:hover {
+    color: white;
+    background-color: #000;
+    transition: #000 0.5s ease-in;
+}
+
+img {
+    display: block;
+    width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#BasicInfo .right,
+#Projects .left,
+#Contact .right {
+    background-color: black;
+}
+
+h2,
+nav {
+    font-family: var(--title-font);
+}
+
+p,
+strong {
+    font-family: var(--body-font);
+}
+
+input[type=text] {
+    width: 100%;
+    /* Each input box covers the full width of the container */
+    padding: 12px;
+    /* Adds padding within the text box */
+    border: 1px solid #ccc;
+    /* Setting a solid border and its color */
+    border-radius: 4px;
+    /* Slightly rounds the corners of the text box border */
+    box-sizing: border-box;
+    /* This creates a box with a border around the contact form input boxes */
+    margin-top: 6px;
+    /* Adds a margin to the top of the text box */
+    margin-bottom: 16px;
+    /* Adds a margin to the bottom of the text box */
+    resize: vertical;
+    /* This allows the user to resize the text boxes vertically */
+    font-family: var(--body-font);
+}
+
+form label {
+    font-family: var(--title-font)
+}
