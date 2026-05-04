@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="output"></p>
+    <script>
+        function myObject(name, id, value) {
+            this.name = name;
+            this.id = id;
+            this.value = value;
+        }
+
+        var obj1 = new myObject("Alice", 1, 5);
+        var obj2 = new myObject("Bob", 2, 10);
+
+        function outsideFunction(){
+            var X = 5
+            function insideFunction(){
+                var result = X * 2;
+                return result;
+            }
+            return insideFunction();
+        }
+
+        var wordThing = "ninja";
+        var wordThing2 = wordThing.toUpperCase();
+        var wordThing3 = wordThing2.search("I");
+
+        var numberThing = 42.5;
+        var numberThing2 = numberThing.toFixed(2);
+        var numberThing3 = numberThing2.valueOf();
+
+        document.getElementById("output").innerHTML = 
+            outsideFunction() + "<br>" + 
+            wordThing + "<br>" + wordThing2 + "<br>" + wordThing3 + "<br>" + numberThing + "<br>" + numberThing2 + "<br>" + numberThing3;
+            
+
+
+    </script>
+</body>
+
+</html>
