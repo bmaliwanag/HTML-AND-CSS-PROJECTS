@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/formValidation.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <a href="#scrolling">Scroll to Bottom </a>
+    <button class="open-button" onclick="openForm()">Open Form</button>
+
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <h1>Login</h1>
+
+            <label for="email"><b>Email:</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password:</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" class="btn" onclick="validateInput()">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <div id="moving"></div>
+
+    <div id="slideshow">
+        <div>
+            <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Homemade-Pizza_EXPS_FT23_376_EC_120123_3.jpg"
+                alt="Pizza">
+        </div>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Cheeseburger.jpg" alt="Cheeseburger">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $("#slideshow > div:gt(0)").hide();
+
+        setInterval(function () {
+            $('#slideshow > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
+        }, 3000);
+    </script>
+
+    <div id="zooming">
+        Zooming
+    </div>
+    <hr>
+    <div id="scrolling"></div>
+    <div id="contact">
+        <button>contact us</button>
+    </div>
+</body>
+
+</html>
